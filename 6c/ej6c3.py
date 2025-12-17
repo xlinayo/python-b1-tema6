@@ -90,11 +90,15 @@ import pandas as pd
 
 def read_parquet_file(path: str) -> pd.DataFrame:
     #Write your code here
+    dataframe = pd.read_parquet(path)
+    return dataframe
     pass
 
 
 def calculate_amount_quanity(dataframe: pd.DataFrame):
     #Write your code here
+    dataframe["amount"] = dataframe["price"] * dataframe["units_sold"]
+    return dataframe
     pass
 
 
